@@ -28,6 +28,9 @@ for symbol in operators:
 operation_symbol=input("what operation do you want:")
 calculation_function=operators[operation_symbol]
 answer=calculation_function(n1,n2)
-print(f"{n1} {operation_symbol} {n2} = {answer}")
+n3=int(input("enter the theird number:"))
+operation_symbol=input("what operation do you want:")
+second_answer=calculation_function(answer, n3)
+print(f"{answer} {operation_symbol} {n3} = {second_answer}")
 
         
