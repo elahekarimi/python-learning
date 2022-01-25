@@ -21,16 +21,22 @@ operators={
     "*":mul,
     "/":div,
 }
-n1=int((input("enter first number:")))
-n2=int((input("enter second nmber:")))
-for symbol in operators:
-    print(symbol)
-operation_symbol=input("what operation do you want:")
-calculation_function=operators[operation_symbol]
-answer=calculation_function(n1,n2)
-n3=int(input("enter the theird number:"))
-operation_symbol=input("what operation do you want:")
-second_answer=calculation_function(answer, n3)
-print(f"{answer} {operation_symbol} {n3} = {second_answer}")
+def calculation():
+    n1=float((input("enter first number:")))
+    for symbol in operators:
+        print(symbol)
+    should_continue=True
+    while should_continue:
+        operation_symbol=input("what operation do you want:")
+        n2=float((input("enter next nmber:")))
+        calculation_function=operators[operation_symbol]
+        answer=calculation_function(n1,n2)
+        print(f"{n1} {operation_symbol} {n2} = {answer}")
+        if input("enter y for continue:") == "y":
+            n1=answer
+        else:
+            should_continue=False
+            calculation()
+calculation()
 
         
