@@ -1,4 +1,6 @@
 import random
+from art import logo
+print(logo)
 print("wellcome to the guess game")
 print("thinking of a number between 1 to 100")
 print("you have 10 attempt")
