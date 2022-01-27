@@ -8,17 +8,19 @@ a=random.choice(lst)
 
 end_game=False
 while not end_game:
-    for i in range(1,11):
-        i -= 1
-        if i ==0:
-            end_game = True
+    for guess in range(1,6):
+        guess -= 1
+        if guess ==0:
             print("you lose the game")
+            end_game = True
         guess=int(input("enter your number: "))
         if guess > a:
             print("too high")
         elif guess < a:
             print("too short")
         else:
-            print("you win the game")
             end_game = True
+            print("you win the game")
+            
+            
 
