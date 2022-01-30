@@ -2,7 +2,9 @@ from art import logo
 from game_data import data
 from art import vs
 import random
-#print(logo)
+import os
+clear = lambda: os.system('cls')
+
 score=0
 def check_answer(guss,a_follower_count,b_follower_count ):
     if a_follower_count > b_follower_count:
@@ -13,6 +15,10 @@ def check_answer(guss,a_follower_count,b_follower_count ):
 
 game_should_continue=True
 while game_should_continue:
+    print(logo)
+    # compareA = compareB
+    # compareb=random.choice(data)
+
     compareA=random.choice(data)
     compareB=random.choice(data)
     if compareA == compareB:
@@ -35,6 +41,7 @@ while game_should_continue:
     a_follower_count= compareA["follower_count"]
     b_follower_count= compareB["follower_count"]
     is_correct=check_answer(guss, a_follower_count, b_follower_count)
+    clear()
     if is_correct:
         score += 1
         print(f"true, your score {score} ")
