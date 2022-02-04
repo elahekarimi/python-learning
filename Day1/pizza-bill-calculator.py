@@ -8,6 +8,7 @@ size = input("what is the size:")
 print("for other questionz only use y for yes or n for no")
 
 pepperoni= input("do you want  peperoni:")
+print("You can only buy cheese if you order large pizza") 
 cheese= input("do you want  extra chees:")
 bill = 0
 if size == 'small':
