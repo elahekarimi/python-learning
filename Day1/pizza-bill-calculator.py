@@ -1,8 +1,14 @@
 
 #pizza bill calculator
+
+print("for first question only use small large or medium")
+ 
 size = input("what is the size:")
-pepperoni= input('what do you whant the peperoni:')
-cheese= input('what do you whant extra chees:')
+
+print("for other questionz only use y for yes or n for no")
+
+pepperoni= input("do you want  peperoni:")
+cheese= input("do you want  extra chees:")
 bill = 0
 if size == 'small':
    bill = 15
