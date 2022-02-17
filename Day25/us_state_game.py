@@ -15,6 +15,14 @@ while len(guess_state) < 50:
     all_state = data.state.to_list()
     find_row = data[data.state == answer_state]
 
+    if answer_state == "Exit":
+        missing_state = []
+        for state in all_state:
+            if state not in guess_state:
+                missing_state.append(state)
+        new_data = pandas.DataFrame(missing_state)
+        new_data.to_csv("state to learn.csv")
+        break
     if answer_state in all_state:
         guess_state.append(answer_state)
         t = turtle.Turtle()
@@ -23,5 +31,3 @@ while len(guess_state) < 50:
         t.goto(int(find_row.x), int(find_row.y))
         t.write(answer_state)
 
-
-screen.exitonclick()
