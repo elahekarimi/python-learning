@@ -1,9 +1,4 @@
 
-from inspect import walktree
-from multiprocessing.dummy import current_process
-from tkinter import Menu
-
-
 MENU = {
     "espresso": {
         "ingredients": {
