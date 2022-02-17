@@ -16,10 +16,11 @@ while len(guess_state) < 50:
     find_row = data[data.state == answer_state]
 
     if answer_state == "Exit":
-        missing_state = []
-        for state in all_state:
-            if state not in guess_state:
-                missing_state.append(state)
+        missing_state = [state for state in all_state if state not in guess_state]
+        # missing_state = []
+        # for state in all_state:
+        #     if state not in guess_state:
+        #         missing_state.append(state)
         new_data = pandas.DataFrame(missing_state)
         new_data.to_csv("state to learn.csv")
         break
