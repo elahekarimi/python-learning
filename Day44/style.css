@@ -1,9 +1,38 @@
 .top-container{
-background-color:#E4F9F5;
+text-align: center;
+position: relative;
+padding-top: 100px;
+
+}
+.middle-container{
+text-align: center;
+}
+.bottom-cloud{
+position:absolute;
+top:300px;
+left:300px;
+}
+.top-cloud{
+position:absolute;
+right:400px;
+top:50px;
 }
 body{
+background-color:#E4F9F5;
 margin:0;
+font-family: 'Merriweather', serif;
 }
 h1{
-margin-top:0;
+color:#66BFBF;
+margin-top:50px;
+font-family: 'Sacramento', cursive;
+font-size:5.6em;
+}
+h2{
+margin-top:10px;
+font-family: 'Montserrat', sans-serif;
+color:#66BFBF;
+}
+h3{
+font-family: 'Montserrat', sans-serif;
 }
